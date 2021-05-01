@@ -31,3 +31,26 @@ If you prefer to download a new sample and use it to construct the TF-ICF scheme
     --normalize-words
 
 To learn more about this tool and the options it accepts, use `./tools/idf.py --help`.
+
+## Generating timelines
+
+To generate event timelines, use the `consume` tool available in the `tools` directory after downloading a tweet corpus.
+The [Zhao et al. (2011)](https://arxiv.org/abs/1106.4300) baselines can be generated using the following snippets.
+In all cases, the tools expect the file to contain tweets: one tweet per line.
+Therefore before running the following, you need to download the tweets anew from the provided IDs.
+
+    ./tools/consume.py \
+    --event data/event/CRYCHE.json \
+    --output results/CRYCHE-Zhao.json \
+    --consumer ZhaoConsumer \
+    --skip 10 --periodicity 1 --post-rate 1.7
+
+You can create timelines using ELD similarly.
+ELD uses different parameters and expects datasets for an understanding period and an event period.
+
+    ./tools/consume.py \
+    --understanding data/understanding/CRYCHE.json \
+    --event data/event/CRYCHE.json \
+    --consumer ELDConsumer \
+    --min-size 3 --scheme data/idf.json \
+    --freeze-period 20 --max-intra-similarity 0.85 --speed 0.5
