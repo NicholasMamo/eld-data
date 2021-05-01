@@ -16,16 +16,16 @@ Instead, we are only allowed to share the tweet IDs.
 
 The tweet IDs are separated in two folders: `data/understanding` and `data/event`.
 These two folders represent the understanding and event periods, described in the paper.
-Each folder contains an `ids` folder, which contains the tweet IDs of each corpus.
+Each folder contains an `ids` folder, which contains the tweet IDs of each corpus, and an `idmeta` folder, which contains the metadata about each ID file.
 
-An additional file—`data/ids/sample.json`—includes tweet IDs collected using Twitter's Streaming API.
+An additional file—`data/sample.json`—includes tweet IDs collected using Twitter's Streaming API.
 This sample of tweets was used in the paper to construct the TF-ICF table.
 Instead of downloading it anew, you can use the `data/idf.json` file instead¸ which stores the TF-ICF scheme.
 
-If you prefer to download a new sample and use it to construct the TF-ICF scheme, you can use the `idf` tool:
+If you prefer to download a new sample and use it to construct the TF-ICF scheme, download the original tweets and use the `idf` tool:
 
-    ./tools/idf.py --file ~/DATA/evaluation/apd/data/sample.json \
-    --output results/tfidf.json \
+    ./tools/idf.py --file data/sample.json \
+    --output data/idf.json \
     --stem \
     --remove-unicode-entities \
     --normalize-words
