@@ -83,3 +83,24 @@ The following parameters are passed on to the consumer:
 - `--speed`: The speed at which to feed tweets to the consumer (a value of 0.5 means the event is simulated at half the speed); necessary in large events which overwhelm ELD
 
 More details about the parameters available in the [original paper](https://www.scitepress.org/PublicationsDetail.aspx?ID=o+Iys1RHmPU=&t=1).
+
+## Citation
+
+If you use this data, please cite the paper
+
+> Mamo, N.; Azzopardi, J. and Layfield, C. (2021). Fine-grained Topic Detection and Tracking on Twitter. In Proceedings of the 13th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management - KDIR, ISBN 978-989-758-533-3; ISSN 2184-3228, pages 79-86. DOI: 10.5220/0010639600003064
+
+```
+@conference{kdir21,
+  author={Nicholas Mamo. and Joel Azzopardi. and Colin Layfield.},
+  title={Fine-grained Topic Detection and Tracking on Twitter},
+  booktitle={Proceedings of the 13th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management - KDIR,},
+  year={2021},
+  pages={79-86},
+  publisher={SciTePress},
+  organization={INSTICC},
+  doi={10.5220/0010639600003064},
+  isbn={978-989-758-533-3},
+  issn={2184-3228},
+}
+```
