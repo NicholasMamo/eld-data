@@ -22,6 +22,7 @@ An additional file—`data/sample.json`—includes tweet IDs collected using Twi
 This sample of tweets was used in the paper to construct the TF-ICF table.
 Instead of downloading it anew, you can use the `data/idf.json` file instead¸ which stores the TF-ICF scheme.
 **The TF-IDF scheme is only used if you do not provide an understanding period tweet corpus.**
+**It is recommended that you collect an understanding period tweet corpus for best results.**
 
 If you prefer to download a new sample and use it to construct the TF-ICF scheme, download the original tweets and use the `idf` tool:
 
